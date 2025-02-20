@@ -2,42 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <title>Document</title>
-    <link href="style.css"type="text/css"rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="mainbody">
-<div id="calculator">
-<div id="output">
-<input type="text" id="output-text">
-</div>
-<div id="buttons">
-    
-    <button onclick="btnclick(7)" id="seven">7</button>
-    <button onclick="btnclick(8)" id="eight">8</button>
-    <button onclick="btnclick(9)" id="nine">9</button>
-    <button onclick="btnclick(4)" id="four">4</button>
-    <button onclick="btnclick(5)" id="five">5</button>
-    <button onclick="btnclick(6)" id="six">6</button>
-    <button onclick="btnclick(1)" id="one">1</button>
-    <button onclick="btnclick(2)" id="two">2</button>
-    <button onclick="btnclick(3)" id="three">3</button>
-    <button onclick="btnclick(0)" id="zero">0</button>
-    <button onclick="btnclick('.')" id="point">.</button>
-    <button onclick="btnclick('00')" id="backspace">00</button>
-    <button onclick="btnclick('/')" id="div">/</button>
-    <button onclick="btnclick('*')" id="mult">x</button>
-    <button onclick="btnclick('-')" id="sub">-</button>
-    <button onclick="btnclick('+')" id="add">+</button>
-    <button onclick="equalclick()" id="equal">=</button>
-    <button onclick="btnclear()"id="clear">clear</button>
-</div>
-<h1 id="heading">Basic Calculator</h1>
-</div>
-</div>
-<script src="script.js"></script>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="calculator p-4 shadow-lg rounded">
+            <input type="text" class="display form-control text-end mb-3" id="output-text" readonly>
+            <div class="row g-2">
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick(7)">7</button>
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick(8)">8</button>
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick(9)">9</button>
+                <button class="col-3 btn btn-warning btn-custom" onclick="btnclick('/')">/</button>
+
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick(4)">4</button>
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick(5)">5</button>
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick(6)">6</button>
+                <button class="col-3 btn btn-warning btn-custom" onclick="btnclick('*')">*</button>
+
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick(1)">1</button>
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick(2)">2</button>
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick(3)">3</button>
+                <button class="col-3 btn btn-warning btn-custom" onclick="btnclick('-')">-</button>
+
+                <button class="col-6 btn btn-light btn-custom" onclick="btnclick(0)">0</button>
+                <button class="col-3 btn btn-light btn-custom" onclick="btnclick('.')">.</button>
+                <button class="col-3 btn btn-warning btn-custom" onclick="btnclick('+')">+</button>
+
+                <button class="col-6 btn btn-danger btn-custom btn-long" onclick="btnclear()">Clear</button>
+                <button class="col-6 btn btn-success btn-custom btn-long" onclick="equalclick()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
